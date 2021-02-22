@@ -13,3 +13,5 @@ extern void testPairToNumber(
 extern void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor);
+
+#endif
