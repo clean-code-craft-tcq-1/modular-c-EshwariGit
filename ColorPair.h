@@ -1,9 +1,7 @@
 #ifndef COLORPAIR_H_
 #define COLORPAIR_H_
 
-
-
-
+#include "ColorSplit.h"
 typedef struct {
     enum MajorColor majorColor;
     enum MinorColor minorColor;
