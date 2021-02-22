@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include "ColorPair.h"
+
 extern void testPairToNumber(
     enum MajorColor major,
     enum MinorColor minor,
@@ -13,5 +15,3 @@ extern void testPairToNumber(
 extern void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor);
-
-#endif
