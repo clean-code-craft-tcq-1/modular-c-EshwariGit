@@ -8,7 +8,7 @@ typedef struct {
 } ColorPair;
 
 extern void ColorPairToString(const ColorPair* colorPair, char* buffer);
-extern ColorPair GetColorFromPairNumber(int pairNumber);
+extern ColorPair GetColorFromPairNumber(int pairNmber);
 extern int GetPairNumberFromColor(const ColorPair* colorPair);
 
 #endif
