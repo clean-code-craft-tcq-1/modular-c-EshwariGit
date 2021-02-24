@@ -9,7 +9,7 @@ const char* MinorColorNames[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 
-const char * MinorColorToString(MinorColor_Type minorcolor)
+const char * MinorColorToString(MinorColor_type minorcolor)
 {
     return (MinorColorNames[minorcolor]);
 }
