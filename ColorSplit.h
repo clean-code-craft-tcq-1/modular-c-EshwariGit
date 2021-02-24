@@ -3,7 +3,6 @@
 typedef enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET, numberOfMajorColorstype} MajorColor_type;
 typedef enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE, numberOfMinorColorstype} MinorColor_type;
 
-const int MAX_COLORPAIR_NAME_CHARS = 16;
 
 extern const char * MinorColorToString(MinorColor_type minorcolor);
 
