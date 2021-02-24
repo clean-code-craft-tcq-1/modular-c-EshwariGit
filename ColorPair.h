@@ -3,8 +3,8 @@
 
 #include "ColorSplit.h"
 typedef struct {
-    enum MajorColor majorColor;
-    enum MinorColor minorColor;
+   MajorColor_type majorColor;
+   MinorColor_type minorColor;
 } ColorPair;
 
 extern void ColorPairToString(const ColorPair* colorPair, char* buffer);
