@@ -1,20 +1,23 @@
-#include "ColorSplit.h"
+#include <stdio.h>         
+#include "ColorPair.h"
 
-const char* MajorColorNames[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
-int numberOfMajorColors =
-    sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-const char* MinorColorNames[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-
-const char * MinorColorToString(MinorColor_type minorcolor)
-{
-    return (MinorColorNames[minorcolor]);
+void ColorPairToString(const ColorPair* colorPair, char* buffer) {
+    sprintf(buffer, "%s %s",
+        MajorColorNames[colorPair->majorColor],
+        MinorColorNames[colorPair->minorColor]);
 }
 
-const char * MajorColorToString(MajorColor_type majorcolor )
-{
-    return MajorColorNames[majorcolor];
+ColorPair GetColorFromPairNumber(int pairNumber) {
+    ColorPair colorPair;
+    int zeroBasedPairNumber = pairNumber - 1;
+    colorPair.majorColor = 
+        (MajorColor_type)(zeroBasedPairNumber / numberOfMinorColors);
+    colorPair.minorColor =
+        (MinorColor_type)(zeroBasedPairNumber % numberOfMinorColors);
+    return colorPair;
+}
+
+int GetPairNumberFromColor(const ColorPair* colorPair) {
+    return colorPair->majorColor * numberOfMinorColors +
+            colorPair->minorColor + 1;
 }
