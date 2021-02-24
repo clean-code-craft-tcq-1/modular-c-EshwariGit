@@ -1,17 +1,14 @@
 #ifndef TESTFUNCTIONS_H_
 #define TESTFUNCTIONS_H_
 
-
-#include <stdio.h>
-#include <assert.h>
-
 #include "ColorPair.h"
 
 extern void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
+     MajorColor_type major,
+     MinorColor_type minor,
     int expectedPairNumber);
+	
 
 extern void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor);
+    MajorColor_type expectedMajor,
+    MinorColor_type expectedMinor);
