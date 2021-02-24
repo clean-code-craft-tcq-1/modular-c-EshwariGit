@@ -12,3 +12,4 @@ extern void testPairToNumber(
 extern void testNumberToPair(int pairNumber,
     MajorColor_type expectedMajor,
     MinorColor_type expectedMinor);
+#endif
